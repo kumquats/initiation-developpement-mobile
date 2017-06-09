@@ -1,15 +1,15 @@
 # 3.1 - TP Cordova
 
 ## Objectifs
-Utiliser Cordova et créer une première application mobile à partir d'un mobile web app.
+Créer une première application mobile Cordova à partir d'une mobile web app.
 
 ## Préparatifs
-1. Installer Java JDK (avec JRE) et modifier les variables d’environnement :
+1. Installer Java JDK (avec JRE) et modifier les variables d’environnement JAVA_HOME et PATH:
 ```bash
-JAVA_HOME = C:\Program Files\Java\jdk1.8.0_45   
-PATH :
-    C:\Program Files\Java\jdk1.8.0_45;
-    C:\Program Files\Java\jdk1.8.0_45\bin;
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_121
+PATH +=
+    C:\Program Files\Java\jdk1.8.0_121;
+    C:\Program Files\Java\jdk1.8.0_121\bin;
 ```
 2. Installer Android Studio
     + bien préciser le dossier dans lequel enregistrer les SDK
@@ -30,11 +30,11 @@ Extra /
 ```
 4. Ajouter deux dossiers des sdk aux variables d’environnement
 ```bash
-    PATH :
+PATH +=
     C:\cordova-dev\sdk\tools
     C:\cordova-dev\sdk\platform-tools
 ```
-5. Installer NodeJS http://nodejs.org/
+5. Installer NodeJS http://nodejs.org/ (version 8.x.x)
 6. Installer Git http://git-scm.com/ et sélectionner les choix suivants pendant le processus d'installation :
     + "Use Git from the Windows Command Prompt"
     + "Checkout as-is, commit as-is"
@@ -47,8 +47,8 @@ Extra /
 ## Instructions
 1. Créer un nouveau projet cordova, dans un terminal lancer les commandes suivantes :
 ```
-cordova create youtube fr.kumquats.youtube Youtube
-cd youtube
+cordova create cordovatube fr.kumquats.cordovatube CordovaTube
+cd cordovatube
 cordova platform add android
 ```
 
