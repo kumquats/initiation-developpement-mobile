@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CordovaTube</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/flatly-bootstrap.css">
+	<style type="text/css">
+		body {
+			padding-top: 80px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"> <i class="glyphicon glyphicon-film" style="margin-right:10px;"></i> CordovaTube</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="#" data-content="Contenu de la page Devenez hote">My Videos</a></li>
+						<li><a href="#" data-content="Contenu de la page Aide">Watch Later</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">About</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>
+		</nav>
+	</header>
+
+	<section class="videoList">
+		<div class="container">
+			<button type="button" class="btn btn-danger btn-block addButton" style="margin-bottom:10px">Ajouter une vidéo</button>
+		</div>
+
+		<section class="list-group">
+			<a href="#" class="list-group-item">
+				<img src="images/catlaugh.jpg" class="img-responsive"/>
+				<h4 style="padding:10px" class="list-group-item-heading">CATS will make you LAUGH YOUR HEAD OFF - Funny CAT compilation</h4>
+			</a>
+			<a href="#" class="list-group-item">
+				<img src="images/catfails.jpg" class="img-responsive"/>
+				<h4 style="padding:10px" class="list-group-item-heading">Hilarious Cat Fails (April 2017)</h4>
+			</a>
+			<a href="#" class="list-group-item">
+				<img src="images/catssofunny.jpg" class="img-responsive"/>
+				<h4 style="padding:10px" class="list-group-item-heading">Cats are so funny you will die laughing - Funny cat compilation</h4>
+			</a>
+		</section>
+	</section>
+
+	<section class="videoPlayer container hidden">
+		<h1></h1>
+		<div class="embed-responsive embed-responsive-16by9">
+			<video class="embed-responsive-item" width="320" height="200" controls src="" poster=""></video>
+		</div>
+	</section>
+
+	<div class="modal fade" tabindex="-1" role="dialog" >
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Nouvelle vidéo</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="title" class="control-label">Titre:</label>
+							<input type="text" class="form-control" name="title">
+						</div>
+						<div class="form-group">
+							<button class="btn btn-default thumb">Vignette...</button>
+							<img src="" class="thumbPreview" style="height: 45px;border-radius:3px;">
+						</div>
+						<div class="form-group">
+							<button class="btn btn-default video">Vidéo...</button>
+							<span class="videoPreview" style="text-overflow: ellipsis;width: 50%;display: inline-block;white-space: nowrap;overflow: hidden;vertical-align: middle;"></span>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-danger submit">Ajouter Vidéo</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/babel" src="js/main.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/babel.min.js"></script>
+</body>
+</html>
