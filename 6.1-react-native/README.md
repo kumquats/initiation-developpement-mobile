@@ -4,7 +4,7 @@
 Manipuler le JSX, utiliser une api native
 
 ## Préparatifs
-1. Repartir du précédent TP
+- Repartir du précédent TP
 
 ## Instructions
 - Lorsqu'on appuie sur une vignette, on doit afficher une [Modal](https://facebook.github.io/react-native/docs/modal.html avec le titre de la vidéo choisie et l'image en plein écran en fond.
