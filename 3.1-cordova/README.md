@@ -55,40 +55,34 @@ et en appuyant frénétiquement sur "Numéro de build" jusqu'à ce qu'un message
 
 ## Instructions
 1. Créer un nouveau projet cordova, dans un terminal lancer les commandes suivantes :
-```
-cordova create cordovatube fr.kumquats.cordovatube CordovaTube
-cd cordovatube
-cordova platform add android
-```
-
+	```
+	cordova create cordovatube fr.kumquats.cordovatube CordovaTube
+	cd cordovatube
+	cordova platform add android
+	```
 2. Tester sur l'emulateur
-```
-cordova emulate android
-```
-
+	```
+	cordova emulate android
+	```
 3. Test sur un périphérique connecté en USB
-- activer les options développeur et autoriser le débogage usb sur le téléphone
-- installer le driver USB du téléphone sur le PC
-- connecter le téléphone au PC avec le cable USB
-- lancer la commande : ```adb devices```. Cela doit afficher une demande  une autorisation sur le téléphone puis, après acceptation, afficher l'id du périphérique suivi de "device" dans la console
-- déployer le projet sur le téléphone connecté :
-````
-cordova run android --device
-````
-
+	- activer les options développeur et autoriser le débogage usb sur le téléphone
+	- installer le driver USB du téléphone sur le PC
+	- connecter le téléphone au PC avec le cable USB
+	- lancer la commande : ```adb devices```. Cela doit afficher une demande  une autorisation sur le téléphone puis, après acceptation, afficher l'id du périphérique suivi de "device" dans la console
+	- déployer le projet sur le téléphone connecté :
+	````
+	cordova run android --device
+	````
 4. Inspecter l'application avec chrome dev tools (android 4.4 mini)
-- ouvrir dans Chrome (côté poste de développement) l'adresse : `chrome://inspect`
-- ouvrir l'onglet "Elements" et inspecter/modifier le code html de l'application
-
-
+	- ouvrir dans Chrome (côté poste de développement) l'adresse : `chrome://inspect`
+	- ouvrir l'onglet "Elements" et inspecter/modifier le code html de l'application
 5. Installer l'apk depuis une URL
-- sur le poste de développement :
-    + ```cordova build android```
-    + copier l'apk généré depuis le dossier platforms/android/build/outputs/apk/
-    + coller l'apk dans le répertoire web racine de votre serveur apache (ex. c:/xampp/htdocs)
-- sur le téléphone :
-    + autoriser l'installation de sources inconnues (settings>security)
-    + lancer Chrome et aller sur l'adresse du poste de développement pour télécharger le fichier apk (http://192.168.xxxxx/bazinga.apk)
-
+	- sur le poste de développement :
+		+ ```cordova build android```
+		+ copier l'apk généré depuis le dossier platforms/android/build/outputs/apk/
+		+ coller l'apk dans le répertoire web racine de votre serveur apache (ex. c:/xampp/htdocs)
+	- sur le téléphone :
+		+ autoriser l'installation de sources inconnues (settings>security)
+		+ lancer Chrome et aller sur l'adresse du poste de développement pour télécharger le fichier apk (http://192.168.xxxxx/bazinga.apk)
 6. Remplacer le contenu du dossier www du projet par les fichiers du TP précédent et compiler + lancer l'application
 
