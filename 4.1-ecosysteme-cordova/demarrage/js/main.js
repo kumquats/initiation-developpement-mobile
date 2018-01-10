@@ -8,13 +8,16 @@ const videoListContainer = document.querySelector('.videoListContainer'),
 	logo = document.querySelector('.navbar-brand');
 
 
-	// au chargement de l'app on récupère la liste des vidéos
-	fetch('videos/data.json')
-	.then( response => response.json() )
-	.then( json => {
-		videos = json;
-		showVideoList()
-	} );
+// au chargement de l'app on récupère la liste des vidéos
+let request = new XMLHttpRequest();
+request.open('GET', 'videos/data.json');
+request.onload = () => {
+	const json = JSON.parse( request.responseText );
+	videos = json;
+	showVideoList();
+}
+request.send();
+
 
 	/**
 	 * Affiche la liste des vidéos et masque le player
