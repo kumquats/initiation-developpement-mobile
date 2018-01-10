@@ -1,4 +1,5 @@
 let videos = [];
+
 const videoListContainer = document.querySelector('.videoListContainer'),
 	videoList = videoListContainer.querySelector('.videoList'),
 	videoPlayer = document.querySelector('.videoPlayer'),
@@ -18,14 +19,15 @@ const videoListContainer = document.querySelector('.videoListContainer'),
 	/**
 	 * Affiche la liste des vidéos et masque le player
 	 */
-	const showVideoList = () => {
-		let html = '';
-		toggleListeners( 'off' );
-		videos.forEach( video => {
-			html += `<a href="#" class="list-group-item" data-video="${encodeURIComponent( JSON.stringify(video) )}">
-		<img src="${video.thumbnail}" class="img-responsive"/>
-		<h4 style="padding:10px" class="list-group-item-heading">${video.title}</h4>
-		</a>`;
+const showVideoList = () => {
+	let html = '';
+	toggleListeners( 'off' );
+	videos.forEach( video => {
+		html += `<a href="#" class="list-group-item"
+			data-video="${encodeURIComponent( JSON.stringify(video) )}">
+			<img src="${video.thumbnail}" class="img-responsive"/>
+			<h4 style="padding:10px" class="list-group-item-heading">${video.title}</h4>
+			</a>`;
 	});
 	videoList.innerHTML = html;
 	videoListContainer.classList.remove( 'hidden' );
@@ -41,10 +43,10 @@ const videoListContainer = document.querySelector('.videoListContainer'),
 const toggleListeners = state => {
 	const links = videoList.querySelectorAll('a');
 	links.forEach( link => {
-		if (status == 'on') {
-			link.removeEventListener('click', showVideoPlayer );
-		} else {
+		if (state == 'on') {
 			link.addEventListener('click', showVideoPlayer );
+		} else {
+			link.removeEventListener('click', showVideoPlayer );
 		}
 	});
 }
