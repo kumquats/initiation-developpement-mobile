@@ -20,4 +20,4 @@ Repartir des fichiers du TP précédent ou des fichiers HTML/CSS/JS de démarrag
     + la vignette de la vidéo (bouton qui lance l'appareil photo)
     + le fichier mp4 de la vidéo (bouton qui lance la caméra)
     Pour lancer la caméra, utiliser le plugin `cordova-plugin-media-capture` cf. https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media-capture/index.html#capturecapturevideo
-2. Lors de l'appui sur une vignette, afficher un page contenant le titre de la vidéo choisie et le lecteur de la vidéo
+2. Enregistrer en local la liste des vidéos pour que si l'utilisateur kill et relance l'appli, les vidéos prises soient toujours présentes
