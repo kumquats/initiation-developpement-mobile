@@ -10,17 +10,17 @@ import {
 export default class App extends Component {
 	videos = [{
 			"title":"CATS will make you LAUGH YOUR HEAD OFF - Funny CAT compilation",
-			"thumbnail":"images/catlaugh.jpg",
+			"thumbnail": require("./images/catlaugh.jpg"),
 			"video": "videos/catfails.mp4"
 		},
 		{
 			"title":"Hilarious Cat Fails (April 2017)",
-			"thumbnail":"images/catfails.jpg",
+			"thumbnail": require("./images/catfails.jpg"),
 			"video": "videos/catfails.mp4"
 		},
 		{
 			"title":"Cats are so funny you will die laughing - Funny cat compilation",
-			"thumbnail":"images/catssofunny.jpg",
+			"thumbnail": require("./images/catssofunny.jpg"),
 			"video": "videos/catfails.mp4"
 		}];
 
@@ -42,7 +42,7 @@ export default class App extends Component {
 			videoList.push(
 				<View key={video.thumbnail+video.video}>
 					{/* <Image /> */}
-					<Text>{video.thumbnail}</Text>
+					<Image source={video.thumbnail} />
 					<Text>{video.title}</Text>
 				</View>
 			);
