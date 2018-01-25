@@ -44,7 +44,6 @@ export default class App extends Component {
 		this.videos.forEach( video => {
 			videoList.push(
 				<View key={video.thumbnail+video.video}>
-					{/* <Image /> */}
 					<Image source={video.thumbnail} />
 					<Text>{video.title}</Text>
 				</View>
