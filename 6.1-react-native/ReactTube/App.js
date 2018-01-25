@@ -4,7 +4,8 @@ import {
 	Text,
 	View,
 	Image,
-	Button
+	Button,
+	ScrollView
 } from 'react-native';
 
 export default class App extends Component {
@@ -26,12 +27,14 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<View>
+			<View style={{padding:20}}>
 				<View>
-					<Text>ReactTube</Text>
+					<Text style={{fontSize:30}}>ReactTube</Text>
 				</View>
-				<Button title="Ajouter une vidéo" />
+				<Button title="Ajouter une vidéo" onPress={()=>console.log('press')} color="#f30" />
+				<ScrollView>
 				{ this.renderVideoList() }
+				</ScrollView>
 			</View>
 		);
 	}
