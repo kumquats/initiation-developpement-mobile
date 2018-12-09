@@ -16,6 +16,14 @@ et en appuyant frénétiquement sur "Numéro de build" jusqu'à ce qu'un message
 - **Git et Node qui vont permettre d'installer des programmes (paquets npm) et notamment Cordova et React Native**
 - **Python 2**
 
+### 0. lancer les téléchargements de :
+- Java JDK 8 : http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+- Android studio : https://developer.android.com/studio/
+- Visual studio code : https://code.visualstudio.com/
+- Node JS (version <u>11.x.x</u>) : http://nodejs.org/
+- Git : http://git-scm.com
+
+
 ### 1. L'IDE
 1. Installer Visual Studio Code (https://code.visualstudio.com/)
 
