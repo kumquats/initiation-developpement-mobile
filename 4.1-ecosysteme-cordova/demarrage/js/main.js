@@ -19,9 +19,9 @@ request.onload = () => {
 request.send();
 
 
-	/**
-	 * Affiche la liste des vidéos et masque le player
-	 */
+/**
+ * Affiche la liste des vidéos et masque le player
+ */
 const showVideoList = () => {
 	let html = '';
 	toggleListeners( 'off' );
@@ -39,7 +39,7 @@ const showVideoList = () => {
 }
 
 /**
- * Ajoute ou supprimer les écouteurs d'événements
+ * Ajoute ou supprime les écouteurs d'événements
  * sur les liens de la videoList
  * @param {string} state 'on' | 'off'
  */
