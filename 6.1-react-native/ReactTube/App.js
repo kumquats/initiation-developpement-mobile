@@ -33,7 +33,7 @@ export default class App extends Component {
 				</View>
 				<Button title="Ajouter une vidéo" onPress={()=>console.log('press')} color="#f30" />
 				<ScrollView>
-				{ this.renderVideoList() }
+					{ this.renderVideoList() }
 				</ScrollView>
 			</View>
 		);
@@ -52,4 +52,3 @@ export default class App extends Component {
 		return videoList;
 	}
 }
-
